@@ -27,8 +27,8 @@ type FakeTestV1 struct {
 	*testing.Fake
 }
 
-func (c *FakeTestV1) ActiNodeLists(namespace string) v1.ActiNodeListInterface {
-	return &FakeActiNodeLists{c, namespace}
+func (c *FakeTestV1) ActiNodes(namespace string) v1.ActiNodeInterface {
+	return &FakeActiNodes{c, namespace}
 }
 
 // RESTClient returns a RESTClient that is used to communicate

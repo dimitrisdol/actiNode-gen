@@ -27,7 +27,7 @@ import (
 
 type TestV1Interface interface {
 	RESTClient() rest.Interface
-	ActiNodeListsGetter
+	ActiNodesGetter
 }
 
 // TestV1Client is used to interact with features provided by the test.dimitrisdol.com group.
@@ -35,8 +35,8 @@ type TestV1Client struct {
 	restClient rest.Interface
 }
 
-func (c *TestV1Client) ActiNodeLists(namespace string) ActiNodeListInterface {
-	return newActiNodeLists(c, namespace)
+func (c *TestV1Client) ActiNodes(namespace string) ActiNodeInterface {
+	return newActiNodes(c, namespace)
 }
 
 // NewForConfig creates a new TestV1Client for the given config.
