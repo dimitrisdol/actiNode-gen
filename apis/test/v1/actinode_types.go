@@ -41,6 +41,7 @@ type ActiNodeStatus struct {
 	// Important: Run "make" to regenerate code after modifying this file
 }
 
+// +genclient
 //+kubebuilder:object:root=true
 //+kubebuilder:subresource:status
 
@@ -53,8 +54,6 @@ type ActiNode struct {
 	Status ActiNodeStatus `json:"status,omitempty"`
 }
 
-
-// +genclient
 // +kubebuilder:object:root=true
 
 // ActiNodeList contains a list of ActiNode
