@@ -22,9 +22,9 @@ import (
 	internalinterfaces "generated/informers/externalversions/internalinterfaces"
 	time "time"
 
-	testv1 "./apis/test/v1"
-	versioned "./generated/clientset/versioned"
-	v1 "./generated/listers/test/v1"
+	testv1 "github.com/dimitrisdol/actiNode-gen/apis/test/v1"
+	versioned "github.com/dimitrisdol/actiNode-gen/generated/clientset/versioned"
+	v1 "github.com/dimitrisdol/actiNode-gen/generated/listers/test/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"
