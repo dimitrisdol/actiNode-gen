@@ -1,0 +1,16 @@
+domain: dimitrisdol.com
+layout:
+- go.kubebuilder.io/v3
+multigroup: true
+projectName: actinode-gen
+repo: github.com/dimitrisdol/actiNode-gen
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: dimitrisdol.com
+  group: test
+  kind: ActiNode
+  path: github.com/dimitrisdol/actiNode-gen/apis/test/v1
+  version: v1
+version: "3"
