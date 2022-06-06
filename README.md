@@ -1,8 +1,10 @@
 # actinode-gen
-// TODO(user): Add simple overview of use/purpose
+ Generates an actiNode CRD with informers,clienset and listers. We also provide an extra k8s-client to create our custom CRDs (4 Objects in total)
 
 ## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+ Firstly an ApiExtension is created with kube-builder that enabled the usage of a CRD, namely ActiNode. That ActiNode CRD allows the create of custom Objects that will desribe the current cluster Nodes available (//TODO: it is only hardcoded will need file input).
+ Then with the use of code-generator, we created listers, informers and a clientset.
+ Lastly a Kubernetes client is developed that creates the first 4 Custom
 
 ## Getting Started
 You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster.
@@ -12,7 +14,8 @@ You’ll need a Kubernetes cluster to run against. You can use [KIND](https://si
 1. Install Instances of Custom Resources:
 
 ```sh
-kubectl apply -f config/samples/
+cd k8s-client
+KUBE_NAMESPACE='default' go run .
 ```
 
 2. Build and push your image to the location specified by `IMG`:
@@ -54,10 +57,11 @@ which provides a reconcile function responsible for synchronizing resources unti
 1. Install the CRDs into the cluster:
 
 ```sh
-make install
+kubectl -f config/crd/bases/
 ```
+That way you create the CRD.
 
-2. Run your controller (this will run in the foreground, so switch to a new terminal if you want to leave it running):
+2. (NOT AVAILABLE NOW)Run your controller (this will run in the foreground, so switch to a new terminal if you want to leave it running):
 
 ```sh
 make run
