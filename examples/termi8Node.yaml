@@ -1,0 +1,8 @@
+apiVersion: "test.dimitrisdol.com/v1"
+kind: ActiNode
+metadata:
+  name: actinode-termi8
+spec:
+  cpus: 4
+  mapping: "test mapping sample"
+  pods: "PodA2, PodB2, PodD4"
